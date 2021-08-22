@@ -44,9 +44,9 @@ sõnadest. Lause on defineeritud funktsioonis ``find_sentences()`` ning sõna
 funktsioonis ``find_words_from_sentence()`` (wink-wink, kasutage olemasolevaid funktsioone).
 
 ``def find_years(text: str) -> list`` - funktsioon, mis saab sisendiks sõne ``text``,
-mis koosneb suvalistest sümbolitest ja tagastab järjendis selles sõnes esinevatest
-aastaarvudest (aastaarvud saavad siin olla ainult neljakohalised). Viiekohaline
-arv ei anna ei kaht ega üht aastaarvu välja. Aastaarvude leidmiseks tuleb kasutada regexit.
+mis koosneb suvalistest sümbolitest, ja tagastab järjendi selles sõnes esinevatest
+aastaarvudest (täisarvud ehk int, mitte sõned) (aastaarvud saavad siin olla ainult neljakohalised).
+Viiekohaline arv ei anna ei kaht ega üht aastaarvu välja. Aastaarvude leidmiseks tuleb kasutada regexit.
 
 ### II osa
 Teises teeme natuke tutvust OOP-iga.
