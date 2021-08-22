@@ -94,4 +94,4 @@ ja tagastab objekti Entry vastavate parameetritega.
 
 ### Osa III - Schedule
 
-Muhahahahhaaa!
+Ha.

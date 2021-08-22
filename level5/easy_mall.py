@@ -2,20 +2,41 @@ import re
 
 
 def find_words(text: str) -> list:
-    words = []
-    for match in re.finditer(r"([A-ZÕÄÖÜ][a-zõäöü]+)", text):
-        words.append(match.group())
-    return words
+    """
+    Given string text, return all the words in that string.
+
+    A word here is considered to be any combination letters that starts with
+    a capital letter and contains of at least one more lowercase letter.
+    Note that Estonian õ, ä, ö and ü should also be accepted here.
+
+    :param text: given string to find words from
+    :return: list of words found in given string
+    """
+    pass
 
 
 def find_words_with_vowels(text: str) -> list:
-    words = []
-    for match in re.finditer(r"([AEIOUÕÄÖÜ][a-zõäöü]+)", text):
-        words.append(match.group())
-    return words
+    """
+    Given string text, return all the words in that string that start with a vowel.
+
+    A word here is considered to be any combination letters that starts with
+    a capital letter and contains of at least one more lowercase letter.
+    Note that Estonian õ, ä, ö and ü should also be accepted here.
+
+    :param text: given string to find words from
+    :return: list of words that start with a vowel found in given string
+    """
+    pass
 
 
 def find_sentences(text: str) -> list:
+    """
+    Given string text, return all sentences in that string.
+
+    A sentence is considered to be
+    :param text:
+    :return:
+    """
     sentences = []
     for match in re.finditer(r"([A-ZÕÄÖÜ][^\.!?]*[\.!?]+)", text):
         sentences.append(match.group(1))
