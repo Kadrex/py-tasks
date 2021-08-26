@@ -48,6 +48,14 @@ mis koosneb suvalistest sümbolitest, ja tagastab järjendi selles sõnes esinev
 aastaarvudest (täisarvud ehk int, mitte sõned) (aastaarvud saavad siin olla ainult neljakohalised).
 Viiekohaline arv ei anna ei kaht ega üht aastaarvu välja. Aastaarvude leidmiseks tuleb kasutada regexit.
 
+``def find_phone_numbers(text: str) -> dict`` - funktsioon, mis saab sisendiks sõne ``text``,
+mis koosneb telefoninumbritest, ja tagastab sõnastiku selles sõnes esinevatest telefoninumbritest.
+Telefoninumbril võib olla ees suunakood (suunakood koosneb plussist ja kolmest numbrist (näiteks `+372`),
+suunakoodi võib telefoninumbrist eraldada tühik, aga ei pruugi). Telefoninumber ise on 7-8-kohaline.
+Tagastava sõnastiku võtmeteks on suunakoodid ja väärtusteks järjendid nendest numbritest,
+millel on antud suunakood. Need telefoninumbrid, millel pole suunakoodi ette antud, lähevad
+sõnastikus tühja sõnega võtme alla. Telefoninumbrite ja suunakoodide leidmiseks tuleb kasutada regexit.
+
 ### II osa
 Teises teeme natuke tutvust OOP-iga.
 Olenevalt sellest, mis üllides OOP-iga

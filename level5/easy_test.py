@@ -173,3 +173,39 @@ def test__find_years__3():
     test_str = "1998,1998!45676??7777-1234"
     expected = [1998, 1998, 7777, 1234]
     assert solution.find_years(test_str) == expected
+
+
+# find_phone_numbers()
+
+
+@pytest.mark.timeout(1.0)
+def test__find_phone_numbers__1():
+    test_str = "+372 56887364  +37256887364  +33359835647  56887364"
+    expected = {'+372': ['56887364', '56887364'], '+333': ['59835647'], '': ['56887364']}
+    assert solution.find_phone_numbers(test_str) == expected
+    test_str = "+372 56887364drg445gdr+37256887364thfh +33359835647  56887364"
+    assert solution.find_phone_numbers(test_str) == expected
+
+
+@pytest.mark.timeout(1.0)
+def test__find_phone_numbers__2():
+    # Not valid
+    test_str = "+675 125466 +22 123743"
+    expected = {}
+    assert solution.find_phone_numbers(test_str) == expected
+    # Some valid
+    test_str = "+675 125466 5567342 55327886 +22 123743"
+    expected = {"": ['5567342', '55327886']}
+    assert solution.find_phone_numbers(test_str) == expected
+    # Area code not valid, phone number OK
+    test_str = "+675 125466 5567342 55327886 +22 55782345"
+    expected = {"": ['5567342', '55327886', '55782345']}
+    assert solution.find_phone_numbers(test_str) == expected
+
+
+@pytest.mark.timeout(1.0)
+def test__find_phone_numbers__3():
+    # No space between area code and ... phone number
+    test_str = "+37256772345wdaea+372123+45389023524...++233 32489456"
+    expected = {'+372': ['56772345'], '+453': ['89023524'], '+233': ['32489456']}
+    assert solution.find_phone_numbers(test_str) == expected

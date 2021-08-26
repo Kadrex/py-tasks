@@ -98,9 +98,31 @@ def find_years(text: str) -> list:
     pass
 
 
+def find_phone_numbers(text: str) -> list:
+    """
+    Given string text, return a dictionary of all the phone numbers in that text.
+
+    Phone number might be preceded by area code. Are code is a combination of plus sign and three numbers.
+    The phone number itself is a combination of 7-8 numbers.
+    The phone number might be separated from the area code with a whitespace, but not necessarily.
+
+    The function must return a dictionary where keys are the area codes
+    and values are lists of the phone numbers with the corresponding area number.
+    If a phone number does not have an area code given, its area code would be empty string,
+    so in dictionary it would be like that: {"": ["56332456"]}.
+
+    Phone numbers must be found using regex.
+
+    :param text: given string to find phone numbers from
+    :return: dict containing the numbers
+    """
+    pass
+
+
 print(find_words('KanaMunaPelmeen!!ApelsinÕunMandariinKakaoHernesAhven'))  # ['Kana', 'Muna', 'Pelmeen', 'Apelsin', 'Õun', 'Mandariin', 'Kakao', 'Hernes', 'Ahven']
 print(find_words_with_vowels('KanaMunaPelmeenApelsinÕunMandariinKakaoHernesAhven'))  # ['Apelsin', 'Õun', 'Ahven']
 print(find_sentences('See on esimene - lause. See on ä teine lause! see ei ole lause. Aga kas see on? jah, oli.'))  # ['See on esimene - lause.', 'See on ä teine lause!', 'Aga kas see on?']
 print(find_words_from_sentence("Super lause ää, sorry."))  # ['Super', 'lause', 'ää', 'sorry']
 print(find_words_from_sentences_only('See on esimene - ä lause. See, on teine: lause! see ei ole lause. Aga kas see on? jah, oli.'))  # ['See', 'on', 'esimene', 'ä', 'lause', 'See', 'on', 'teine', 'lause', 'Aga', 'kas', 'see', 'on']
 print(find_years("1998sef672387fh3f87fh83777f777f7777f73wfj893w8938434343"))  # [1998, 7777]
+print(find_phone_numbers("+372 56887364  +37256887364  +33359835647  56887364"))  # {'+372': ['56887364', '56887364'], '+333': ['59835647'], '': ['56887364']}
